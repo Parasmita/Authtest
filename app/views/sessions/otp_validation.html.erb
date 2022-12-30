@@ -1,0 +1,8 @@
+<p id="notice"><%= notice %></p>
+<h1>Enter OTP<h1>
+<%= form_tag validate_with_otp_path, method: :post do %>
+    <%= label_tag :otp%>
+    <%= text_field_tag :otp%>
+    <%= hidden_field_tag 'user_id', @user.id  %>
+    <%= submit_tag "Next"%>
+ <% end %>
